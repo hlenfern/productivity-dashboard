@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Produtividade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Helen Dashboard</h2>
+      <p>Painel de produtividade</p>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Dashboard de Produtividade</h1>
+          <p>Organize tarefas e acompanhe seu progresso.</p>
+        </div>
+      </header>
+
+      <section class="cards">
+        <div class="card">
+          <span>Total</span>
+          <h3 id="total">0</h3>
+        </div>
+
+        <div class="card">
+          <span>Concluídas</span>
+          <h3 id="done">0</h3>
+        </div>
+
+        <div class="card">
+          <span>Pendentes</span>
+          <h3 id="pending">0</h3>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel">
+          <h2>Nova tarefa</h2>
+
+          <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Digite uma tarefa..." />
+            <button id="addBtn">Adicionar</button>
+          </div>
+
+          <div class="progress-section">
+            <div class="progress-header">
+              <span>Progresso</span>
+              <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress-bar">
+              <div id="progress"></div>
+            </div>
+          </div>
+
+          <ul id="taskList" class="task-list"></ul>
+        </div>
+
+        <div class="panel chart-panel">
+          <h2>Visão geral</h2>
+          <div class="chart-container">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
